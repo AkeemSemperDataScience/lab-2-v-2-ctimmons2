@@ -92,15 +92,15 @@ def lab2Question5():
      #Declaration Field
     password = None
     ans = False
-    print('The password must be over 8 characters, have 1 upper case character, have at least 1 lower case character and contain 1 number')
-    print('Please enter a correctly format Passwordpassword')
+    #print('The password must be over 8 characters, have 1 upper case character, have at least 1 lower case character and contain 1 number')
+    #print('Please enter a correctly format Passwordpassword')
     password = input()
     
     while ans == False:
         ans = isValidPassword(password)
         if ans == False:
-            print('The password must be over 8 characters, have 1 upper case character, have at least 1 lower case character and contain 1 number')
-            print('Please re-enter a correct password')
+            #print('The password must be over 8 characters, have 1 upper case character, have at least 1 lower case character and contain 1 number')
+            #print('Please re-enter a correct password')
             password = input()
         
         
@@ -143,6 +143,6 @@ def isValidPassword(password):
 
      
         
-x = lab2Question5()
-print(x)
+#x = lab2Question5()
+#print(x)
 
