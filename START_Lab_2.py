@@ -61,31 +61,47 @@ def lab2Question3(str1, str2):
     # Return the number of times str2 appears in str1
     # For example if str1 = "coding is cool" and str2 = "co" then output should be 2.
     
-    index = str1.count(str2)
-    if index == 0:
-        print('String not found.')
-    else:
-        print('Found at index', index)
+    #Set the string to lower case to prevent the bypass of capital letters - ACSI value of letters and capital are different
+    string1 = str1.lower()
+    string2 = str2.lower()
+    index = string1.count(string2)
+    
+    #if index == 0:
+    #    print('String not found.')
+    #else:
+    #    print('Found at index', index)
     return index
     
-#x = lab2Question3('coding is cool','co')
+x = lab2Question3("Coding is cool","co")
+print(x)
+#x = lab2Question3("Attitude is everything", "tt")
 #print(x)
-#x = lab2Question3('coding is cool','beer')
+#x = lab2Question3("Superstitious and superfluous", "super")
 #print(x)
 
 def lab2Question4(list1, list2):
     # Create a function that takes in two equal length list of numbers. 
     # Return a list of the element-wise sum of the two lists - i.e. the first element of the output list is the sum of the first elements of the input lists
     # If the condition of the function is not satisfied, return a blank list
+
+    #Check for equal length
+    if len(list1) != len(list2):
+        return []
+    
     sum_List = []
-    for i in list1:
-        sum = list1[i-1] + list2[i-1]
+    for i in range(len(list1)):
+        sum = list1[i] + list2[i]
         sum_List.append(sum)
-        print(sum_List)
+        
     return sum_List
 
 #x = lab2Question4([1,2,3,4],[1,2,3,4])
 #print(x)
+#x = lab2Question4([1, 2, 3, 4], [5, 6, 7])
+#print(x)
+#x = lab2Question4([1, 2, 8, 3], [4, 5, 6, 7])
+#print(x)
+
 def lab2Question5():
     # Create a function* that asks a user to enter a password that meets the following criteria:
     # - At least 8 characters long
