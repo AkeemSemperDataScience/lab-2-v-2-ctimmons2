@@ -19,14 +19,23 @@ def lab2Question2(number_val):
     
     #This an intensive computation in recursive mode
     #f(n) = f(n-1)+f(n-2) if n>1
-
-    #base case
-    first = 0
-    second = 1
-
-    #create initial list
-    mList=[first, second]
+    #Declaration field
+    if number_val <= 2:
+        return [0, 1][:number_val]
     
+    mList = lab2Question2(number_val - 1)
+    
+    mList.append(sum(mList[-2:]))
+    
+    return mList
+  
+'''
+    #create initial list
+    #mList=[first,second]
+    
+
+   #works testing but failed testing script
+
     number_val -= 2
 
     while number_val>0:
@@ -38,12 +47,13 @@ def lab2Question2(number_val):
         number_val -= 1
 
     return mList
+'''
 
 #x = lab2Question2(0)
 #print(x)
-#x = lab2Question2(1)
+#x = lab2Question2(-1)
 #print(x)
-#x = lab2Question2(10)
+#x = lab2Question2(7)
 #print(x)
 
 def lab2Question3(str1, str2):
