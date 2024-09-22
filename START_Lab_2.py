@@ -23,8 +23,19 @@ def lab2Question2(number_val):
 
     #return 0 or 1 if the input number is less than 3
     # will stop the recursive call one this number is hit
-    if number_val <= 2:
-        return [0, 1][:number_val]
+
+    #check for negative number and return empty list
+    if number_val < 0:
+        return  []
+    
+    if number_val == 0:
+        return  [0]
+        
+    if number_val == 1:
+        return [0,1]
+    
+    if number_val == 2:
+        return [0,1,1]
     
     #Recursive call entry with decreasing input value
     mList = lab2Question2(number_val - 1)
@@ -37,12 +48,24 @@ def lab2Question2(number_val):
   
 
 #test calls for verification
+#x = lab2Question2(-5)
+#print('-5: ' + str(x) + '  Expected []')
 #x = lab2Question2(0)
-#print(x)
-#x = lab2Question2(-1)
-#print(x)
+#print('0: ' + str(x) + '  Expected [0]')
+#x = lab2Question2(1)
+#print('1: ' + str(x) + '  Expected [0,1]')
+#x = lab2Question2(2)
+#print('2: ' + str(x) + '  Expected [0,1,1]')
+#x = lab2Question2(3)
+#print('3: ' + str(x) + '  Expected [0,1,1,2]')
+#x = lab2Question2(4)
+#print('4: ' + str(x) + '  Expected [0,1,1,2,3]')
+#x = lab2Question2(5)
+#print('5: ' + str(x) + '  Expected [0,1,1,2,3,5]')
+#x = lab2Question2(6)
+#print('6: ' + str(x) + '  Expected [0,1,1,2,3,5,8]')
 #x = lab2Question2(7)
-#print(x)
+#print('7: ' + str(x) + '  Expected [0,1,1,2,3,5,8,13]')
 
 def lab2Question3(str1, str2):
     # Create a function that takes in two strings - str1 and str2
