@@ -29,9 +29,9 @@ def test_lab2Question1_3():
     assert START_Lab_2.lab2Question1("hello") == q1_corr_3
 
 def test_lab2Question2_1():
-    assert START_Lab_2.lab2Question2(7) == q2_corr_1
+    assert START_Lab_2.lab2Question2(5) == q2_corr_1
 def test_lab2Question2_2():    
-    assert START_Lab_2.lab2Question2(12) == q2_corr_2
+    assert START_Lab_2.lab2Question2(6) == q2_corr_2
 def test_lab2Question2_3():
     assert START_Lab_2.lab2Question2(-5) == q2_corr_3
 
